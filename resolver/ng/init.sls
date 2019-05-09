@@ -61,5 +61,6 @@
   service.running:
     - name: {{ resolver.ng.networkmanager.service }}
     - enable: True
+    - onlyif: systemctl is-enabled {{ resolver.ng.networkmanager.service }}
 
 {% endif %}
